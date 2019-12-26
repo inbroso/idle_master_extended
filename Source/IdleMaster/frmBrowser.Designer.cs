@@ -49,11 +49,11 @@ namespace IdleMaster
             this.wbAuth.AllowWebBrowserDrop = false;
             this.wbAuth.Dock = System.Windows.Forms.DockStyle.Fill;
             this.wbAuth.Location = new System.Drawing.Point(0, 0);
-            this.wbAuth.MinimumSize = new System.Drawing.Size(20, 20);
+            this.wbAuth.MinimumSize = new System.Drawing.Size(20, 22);
             this.wbAuth.Name = "wbAuth";
             this.wbAuth.ScriptErrorsSuppressed = true;
             this.wbAuth.ScrollBarsEnabled = false;
-            this.wbAuth.Size = new System.Drawing.Size(976, 798);
+            this.wbAuth.Size = new System.Drawing.Size(976, 859);
             this.wbAuth.TabIndex = 0;
             this.wbAuth.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.wbAuth_DocumentCompleted);
             this.wbAuth.Navigating += new System.Windows.Forms.WebBrowserNavigatingEventHandler(this.wbAuth_Navigating);
@@ -61,18 +61,18 @@ namespace IdleMaster
             // lblSaving
             // 
             this.lblSaving.AutoSize = true;
-            this.lblSaving.Location = new System.Drawing.Point(34, 11);
+            this.lblSaving.Location = new System.Drawing.Point(34, 12);
             this.lblSaving.Name = "lblSaving";
-            this.lblSaving.Size = new System.Drawing.Size(180, 13);
+            this.lblSaving.Size = new System.Drawing.Size(186, 14);
             this.lblSaving.TabIndex = 1;
             this.lblSaving.Text = "Idle Master is saving your information";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::IdleMaster.Properties.Resources.imgSpin;
-            this.pictureBox1.Location = new System.Drawing.Point(13, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(13, 10);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(16, 16);
+            this.pictureBox1.Size = new System.Drawing.Size(16, 17);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
@@ -90,7 +90,7 @@ namespace IdleMaster
             this.lblWebBrowser.Location = new System.Drawing.Point(204, 0);
             this.lblWebBrowser.Name = "lblWebBrowser";
             this.lblWebBrowser.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
-            this.lblWebBrowser.Size = new System.Drawing.Size(772, 16);
+            this.lblWebBrowser.Size = new System.Drawing.Size(772, 17);
             this.lblWebBrowser.TabIndex = 3;
             this.lblWebBrowser.Text = "Loading...";
             this.lblWebBrowser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -101,7 +101,7 @@ namespace IdleMaster
             this.pbWebBrowserLock.Location = new System.Drawing.Point(0, 0);
             this.pbWebBrowserLock.Name = "pbWebBrowserLock";
             this.pbWebBrowserLock.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
-            this.pbWebBrowserLock.Size = new System.Drawing.Size(24, 16);
+            this.pbWebBrowserLock.Size = new System.Drawing.Size(24, 17);
             this.pbWebBrowserLock.TabIndex = 4;
             this.pbWebBrowserLock.TabStop = false;
             // 
@@ -113,22 +113,23 @@ namespace IdleMaster
             this.lblWebBrowserAuth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(166)))), ((int)(((byte)(75)))));
             this.lblWebBrowserAuth.Location = new System.Drawing.Point(24, 0);
             this.lblWebBrowserAuth.Name = "lblWebBrowserAuth";
-            this.lblWebBrowserAuth.Size = new System.Drawing.Size(180, 16);
+            this.lblWebBrowserAuth.Size = new System.Drawing.Size(180, 17);
             this.lblWebBrowserAuth.TabIndex = 5;
             this.lblWebBrowserAuth.Text = "Verifying...";
             this.lblWebBrowserAuth.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmBrowser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(976, 798);
+            this.ClientSize = new System.Drawing.Size(976, 859);
             this.Controls.Add(this.lblWebBrowserAuth);
             this.Controls.Add(this.pbWebBrowserLock);
             this.Controls.Add(this.lblWebBrowser);
             this.Controls.Add(this.wbAuth);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblSaving);
+            this.Font = new System.Drawing.Font("Arial", 8.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;

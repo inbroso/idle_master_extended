@@ -43,7 +43,6 @@ namespace IdleMaster
             EsSystemRequired = 0x00000001
         }
 
-
         private Statistics statistics = new Statistics();
         public List<Badge> AllBadges { get; set; }
 
@@ -684,13 +683,25 @@ namespace IdleMaster
             {
                 CopyResource("IdleMaster.Resources.steam_api.dll", Environment.CurrentDirectory + @"\steam_api.dll");
             }
-            if (File.Exists(Environment.CurrentDirectory + "\\CSteamworks.dll") == false)
+            if (File.Exists(Environment.CurrentDirectory + "\\steam_api64.dll") == false)
             {
-                CopyResource("IdleMaster.Resources.CSteamworks.dll", Environment.CurrentDirectory + @"\CSteamworks.dll");
+                CopyResource("IdleMaster.Resources.steam_api64.dll", Environment.CurrentDirectory + @"\steam_api64.dll");
+            }
+            if (File.Exists(Environment.CurrentDirectory + "\\Steamworks.NET.dll") == false)
+            {
+                CopyResource("IdleMaster.Resources.Steamworks.NET.dll", Environment.CurrentDirectory + @"\Steamworks.NET.dll");
             }
             if (File.Exists(Environment.CurrentDirectory + "\\steam-idle.exe") == false)
             {
                 CopyResource("IdleMaster.Resources.steam-idle.exe", Environment.CurrentDirectory + @"\steam-idle.exe");
+            }
+            if (File.Exists(Environment.CurrentDirectory + "\\Newtonsoft.Json.dll") == false)
+            {
+                CopyResource("IdleMaster.Resources.Newtonsoft.Json.dll", Environment.CurrentDirectory + @"\Newtonsoft.Json.dll");
+            }
+            if (File.Exists(Environment.CurrentDirectory + "\\HtmlAgilityPack.dll") == false)
+            {
+                CopyResource("IdleMaster.Resources.HtmlAgilityPack.dll", Environment.CurrentDirectory + @"\HtmlAgilityPack.dll");
             }
 
             // Update the settings, if needed.  When the application updates, settings will persist.
@@ -806,16 +817,19 @@ namespace IdleMaster
             statisticsToolStripMenuItem.Text = localization.strings.statistics;
             changelogToolStripMenuItem.Text = localization.strings.release_notes;
             officialGroupToolStripMenuItem.Text = localization.strings.official_group;
+            officialGithubToolStripMenuItem.Text = localization.strings.official_github;
             aboutToolStripMenuItem.Text = localization.strings.about;
             lnkSignIn.Text = "(" + localization.strings.sign_in + ")";
             lnkResetCookies.Text = "(" + localization.strings.sign_out + ")";
             toolStripStatusLabel1.Text = localization.strings.next_check;
             toolStripStatusLabel1.ToolTipText = localization.strings.next_check;
-            
+            shutdown.Text = localization.strings.shutdown;
+
+
             lblSignedOnAs.Text = localization.strings.signed_in_as;
             GamesState.Columns[0].Text = localization.strings.name;
             GamesState.Columns[1].Text = localization.strings.hours;
-
+            
             // Set the form height
             var graphics = CreateGraphics();
             var scale = graphics.DpiY * 1.625;
@@ -825,9 +839,9 @@ namespace IdleMaster
             var point = new Point(Convert.ToInt32(graphics.DpiX * 1.14), Convert.ToInt32(lblGameName.Location.Y));
             lblGameName.Location = point;
             point = new Point(Convert.ToInt32(graphics.DpiX * 2.35), Convert.ToInt32(lnkSignIn.Location.Y));
-            lnkSignIn.Location = point;
+            lnkSignIn.Location = new Point(251, 62);
             point = new Point(Convert.ToInt32(graphics.DpiX * 2.15), Convert.ToInt32(lnkResetCookies.Location.Y));
-            lnkResetCookies.Location = point;
+            lnkResetCookies.Location = new Point(251, 62);
 
             runtimeCustomThemeMain(); // JN: Apply the dark theme
 
@@ -894,6 +908,8 @@ namespace IdleMaster
             // Footer
             ssFooter.BackColor = colorBgd;
 
+            shutdown.ForeColor = colorTxt;
+
             // Buttons
             btnPause.FlatStyle = btnResume.FlatStyle = btnSkip.FlatStyle = buttonStyle;
             btnPause.BackColor = btnResume.BackColor = btnSkip.BackColor = colorBgd;
@@ -925,6 +941,7 @@ namespace IdleMaster
             statisticsToolStripMenuItem.Image = whiteIcons ? Resources.imgStatistics_w : Resources.imgStatistics;
             changelogToolStripMenuItem.Image = whiteIcons ? Resources.imgDocument_w : Resources.imgDocument;
             officialGroupToolStripMenuItem.Image = whiteIcons ? Resources.imgGlobe_w : Resources.imgGlobe;
+            officialGithubToolStripMenuItem.Image = whiteIcons ? Resources.imgGlobe_w : Resources.imgGlobe;
             aboutToolStripMenuItem.Image = whiteIcons ? Resources.imgInfo_w : Resources.imgInfo;
 
             // STATUS
@@ -1184,7 +1201,7 @@ namespace IdleMaster
             Boolean previous_behavior2 = Settings.Default.OneThenMany;
             Form frm = new frmSettings();
             frm.ShowDialog();
-
+            
             if (previous != Settings.Default.sort || previous_behavior != Settings.Default.OnlyOneGameIdle || previous_behavior2 != Settings.Default.OneThenMany)
             {
                 StopIdle();
@@ -1288,6 +1305,11 @@ namespace IdleMaster
         private void officialGroupToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Process.Start("https://steamcommunity.com/groups/idlemastery");
+        }
+
+        private void officialGithubToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://github.com/inbroso/idle_master_extended");
         }
 
         private void tmrBadgeReload_Tick(object sender, EventArgs e)

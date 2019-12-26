@@ -31,7 +31,7 @@ namespace IdleMaster
         /// </summary>
         private void InitializeComponent()
         {
-            var resources = new System.ComponentModel.ComponentResourceManager(typeof(frmChangelog));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmChangelog));
             this.rtbChangelog = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
@@ -39,19 +39,21 @@ namespace IdleMaster
             // 
             this.rtbChangelog.BackColor = System.Drawing.Color.White;
             this.rtbChangelog.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rtbChangelog.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtbChangelog.Location = new System.Drawing.Point(0, 0);
             this.rtbChangelog.Name = "rtbChangelog";
             this.rtbChangelog.ReadOnly = true;
-            this.rtbChangelog.Size = new System.Drawing.Size(564, 578);
+            this.rtbChangelog.Size = new System.Drawing.Size(564, 622);
             this.rtbChangelog.TabIndex = 0;
             this.rtbChangelog.Text = "";
             // 
             // frmChangelog
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(564, 578);
+            this.ClientSize = new System.Drawing.Size(564, 622);
             this.Controls.Add(this.rtbChangelog);
+            this.Font = new System.Drawing.Font("Arial", 8.25F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmChangelog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
