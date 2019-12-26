@@ -1,16 +1,35 @@
-Idle Master Extended [![Build status](https://ci.appveyor.com/api/projects/status/96wf12emnlbmo4sj?svg=true)](https://ci.appveyor.com/project/JonasNilson/idle-master-extended)
+Idle Master Extended Modified by inbroso
 ===========
- Get your Steam Trading Cards the Fast Way (Fast Mode Extension)
- ⭐️ Accepted by the official [Idle Master community](https://steamcommunity.com/groups/idlemastery/discussions/0/1485487749771924917/)
+Get your Steam Trading Cards the Fast Way (Fast Mode Extension with a modified interface)
  
-This is a fork of the original [Idle Master](https://github.com/jshackles/idle_master) project (**discontinued** in early 2017) by [jshackles](https://github.com/jshackles) (also known for [Enhanced Steam](https://github.com/jshackles/Enhanced_Steam)).
+This is a fork of the original [Idle Master](https://github.com/jshackles/idle_master) project (**discontinued** in early 2017) by [jshackles](https://github.com/jshackles) (also known for [Enhanced Steam](https://github.com/jshackles/Enhanced_Steam)) and of the [Idle Master Extended] (https://github.com/inbroso/idle_master_extended) project.
 
 Download
 -------
-The latest release is always available here: https://github.com/JonasNilson/idle_master_extended/releases
+The latest modified release is always available here: https://github.com/inbroso/idle_master_extended
+The latest extended release is always available here: https://github.com/JonasNilson/idle_master_extended/releases
+
+Features (modified)
+-------
+
+Extended Modified comes with some new features:
+
+* **64-Bit Application**
+
+* **Updated to .NET 4.8**
+
+* **Updated Steamworks.NET**
+
+* **Modified interface**
+<p align="center">
+  <img src ="https://i.imgur.com/73QcVH3.png"/>
+</p>
+
+* **Some bugfixes**
 
 Features
 -------
+
 Idle Master Extended comes with a few extensions and fixes:
 
 * **Fast mode** (File > Settings > Fast mode): Get your cards faster by automagically switching between simultaneous and individual idling (based on: https://steamcommunity.com/groups/idlemastery/discussions/0/1485487749771924917/)

@@ -184,7 +184,7 @@ namespace IdleMaster
     }
 
     // JN: Change the colors of the form components to match the dark theme
-    private void runtimeCustomThemeSettings()
+    public void runtimeCustomThemeSettings()
     {
         // Read settings
         var customTheme = Settings.Default.customTheme;
@@ -227,9 +227,11 @@ namespace IdleMaster
         btnOK.FlatStyle = btnCancel.FlatStyle = btnAdvanced.FlatStyle = buttonStyle;
         btnOK.BackColor = btnCancel.BackColor = btnAdvanced.BackColor = colorBgd;
         btnOK.ForeColor = btnCancel.ForeColor = btnAdvanced.ForeColor = colorTxt;
+        Program.frm.shutdown.ForeColor = colorTxt;
 
         // Update the icon(s)
-        runtimeWhiteIconsSettings();
+            runtimeWhiteIconsSettings();
+
 
         // Apply to the main frame window
         //this.Parent.Refresh();

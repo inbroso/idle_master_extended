@@ -341,4 +341,10 @@ your Steam account.</value>
   <data name="idle_onethenmany" xml:space="preserve">
     <value>Idle games with more than 2 hours individually, then simultaneously</value>
   </data>
+  <data name="official_github" xml:space="preserve">
+    <value>&amp;Official Github (Extended)</value>
+  </data>
+  <data name="shutdown" xml:space="preserve">
+    <value>Shutdown when complete</value>
+  </data>
 </root>
