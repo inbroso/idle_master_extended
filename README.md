@@ -2,7 +2,7 @@ Idle Master Extended Modified by inbroso
 ===========
 Get your Steam Trading Cards the Fast Way (Fast Mode Extension with a modified interface)
  
-This is a fork of the original [Idle Master](https://github.com/jshackles/idle_master) project (**discontinued** in early 2017) by [jshackles](https://github.com/jshackles) (also known for [Enhanced Steam](https://github.com/jshackles/Enhanced_Steam)) and of the [Idle Master Extended] (https://github.com/inbroso/idle_master_extended) project.
+This is a fork of the original [Idle Master](https://github.com/jshackles/idle_master) project (**discontinued** in early 2017) by [jshackles](https://github.com/jshackles) (also known for [Enhanced Steam](https://github.com/jshackles/Enhanced_Steam)) and of the [Idle Master Extended] (https://github.com/JonasNilson/idle_master_extended/) project.
 
 Download
 -------
